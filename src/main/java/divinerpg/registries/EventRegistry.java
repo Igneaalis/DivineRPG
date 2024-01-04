@@ -10,6 +10,5 @@ public class EventRegistry {
         DivineRPG.LOGGER.info("[DivineRPG] Registered events");
         MinecraftForge.EVENT_BUS.register(new ArmorAbilitiesEvent());
         MinecraftForge.EVENT_BUS.register(new RiveHandler());
-        MinecraftForge.EVENT_BUS.register(new VetheaInventorySwapEvent());
     }
 }

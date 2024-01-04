@@ -18,7 +18,7 @@ public class EntityAdvancedCori extends EntityDivineFlyingMob implements RangedA
     public EntityAdvancedCori(EntityType<? extends EntityDivineFlyingMob> type, Level worldIn) {
         super(type, worldIn);
     }
-    @Override public boolean isAggressive() {return true;}
+
     protected void registerGoals() {
         super.registerGoals();
         this.goalSelector.addGoal(2, new RangedAttackGoal(this, 1.0D, 40, 20.0F));

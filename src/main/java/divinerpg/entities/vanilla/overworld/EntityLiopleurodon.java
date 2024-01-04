@@ -22,11 +22,6 @@ public class EntityLiopleurodon extends EntityDivineWaterMob {
     }
 
     @Override
-    public boolean isAggressive() {
-        return true;
-    }
-
-    @Override
     protected SoundEvent getAmbientSound() {
         return SoundRegistry.LIOPLEURODON.get();
     }
