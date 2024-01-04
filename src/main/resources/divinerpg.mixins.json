@@ -2,7 +2,7 @@
   "required": true,
   "minVersion": "0.8",
   "priority": 1100,
-  "package": "divinerpg.mixin",
+  "package": "divinerpg.mixins",
   "compatibilityLevel": "JAVA_17",
   "refmap": "divinerpg.refmap.json",
   "mixins": [

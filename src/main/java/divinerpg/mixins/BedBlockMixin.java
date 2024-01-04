@@ -1,6 +1,5 @@
-package divinerpg.mixin;
+package divinerpg.mixins;
 
-import divinerpg.DivineRPG;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -33,7 +32,6 @@ public abstract class BedBlockMixin extends HorizontalDirectionalBlock {
 
     @Inject(method = "use", at=@At("HEAD"), cancellable = true)
     public void useMixin(BlockState blockState, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit, CallbackInfoReturnable<InteractionResult> cir) {
-        DivineRPG.LOGGER.info("startSleepInBedMixin!");
         if (level.isClientSide) {
             cir.setReturnValue(InteractionResult.CONSUME);
         } else {
@@ -59,6 +57,9 @@ public abstract class BedBlockMixin extends HorizontalDirectionalBlock {
             }
         }
     }
+
+    @Overwrite
+    public static boolean canSetSpawn(Level p_49489_) { return true; }
 
     @Unique
     private boolean kickVillagerOutOfBed(Level level, BlockPos pos) {
