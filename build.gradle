@@ -140,10 +140,11 @@ jar {
                 "Specification-Title": "divinerpg",
                 "Specification-Vendor": "TeamDivineRPG",
                 "Specification-Version": "1.8",
-                "Implementation-Title": project.name,
-                "Implementation-Version": "${version}",
+                "Implementation-Title": project.jar.baseName,
+                "Implementation-Version": project.jar.archiveVersion,
                 "Implementation-Vendor" :"TeamDivineRPG",
-                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                'MixinConfigs': 'divinerpg.mixins.json'
         ])
     }
 }
