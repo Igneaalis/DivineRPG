@@ -5,7 +5,7 @@ issueTrackerURL = "https://github.com/DivineRPG/DivineRPG/issues" #optional
 
 [[mods]] #mandatory
 modId = "divinerpg" #mandatory
-version = "${file.jarVersion}" #mandatory
+version = "${version}" #mandatory
 displayName = "DivineRPG" #mandatory
 updateJSONURL = "https://raw.githubusercontent.com/Igneaalis/DivineRPG/1.19.2/divinerpg_update.json" #optional
 displayURL = "https://www.curseforge.com/minecraft/mc-mods/official-divinerpg" #optional
