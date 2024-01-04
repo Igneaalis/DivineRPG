@@ -129,6 +129,11 @@ mixin {
     add sourceSets.main, 'divinerpg.refmap.json'
 }
 
+afterEvaluate {
+    tasks.configureReobfTaskForReobfJar.mustRunAfter(tasks.compileJava)
+    tasks.configureReobfTaskForReobfJarJar.mustRunAfter(tasks.compileJava)
+}
+
 jar {
     manifest {
         attributes([

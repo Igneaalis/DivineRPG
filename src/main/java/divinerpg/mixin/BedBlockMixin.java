@@ -1,5 +1,6 @@
 package divinerpg.mixin;
 
+import divinerpg.DivineRPG;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -17,7 +18,6 @@ import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 
-import net.minecraftforge.event.entity.player.PlayerSleepInBedEvent;
 import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -26,35 +26,36 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.List;
 
 @Mixin(BedBlock.class)
-public class BedMixin extends HorizontalDirectionalBlock {
-    private BedMixin(BlockBehaviour.Properties properties) {
+public abstract class BedBlockMixin extends HorizontalDirectionalBlock {
+    private BedBlockMixin(BlockBehaviour.Properties properties) {
         super(properties);
     }
 
-    @Overwrite
-    public InteractionResult use(BlockState blockState, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    @Inject(method = "use", at=@At("HEAD"), cancellable = true)
+    public void useMixin(BlockState blockState, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit, CallbackInfoReturnable<InteractionResult> cir) {
+        DivineRPG.LOGGER.info("startSleepInBedMixin!");
         if (level.isClientSide) {
-            return InteractionResult.CONSUME;
+            cir.setReturnValue(InteractionResult.CONSUME);
         } else {
             if (blockState.getValue(BedBlock.PART) != BedPart.HEAD) {
                 pos = pos.relative((Direction)blockState.getValue(FACING));
                 blockState = level.getBlockState(pos);
-                if (!blockState.is(this)) {
-                    return InteractionResult.CONSUME;
+                if (!blockState.is((BedBlock)(Object)this)) {
+                    cir.setReturnValue(InteractionResult.CONSUME);
                 }
             }
             if ((Boolean)blockState.getValue(BedBlock.OCCUPIED)) {
                 if (!this.kickVillagerOutOfBed(level, pos)) {
                     player.displayClientMessage(Component.translatable("block.minecraft.bed.occupied"), true);
                 }
-                return InteractionResult.SUCCESS;
+                cir.setReturnValue(InteractionResult.SUCCESS);
             } else {
                 player.startSleepInBed(pos).ifLeft((reason) -> {
                     if (reason.getMessage() != null) {
                         player.displayClientMessage(reason.getMessage(), true);
                     }
                 });
-                return InteractionResult.SUCCESS;
+                cir.setReturnValue(InteractionResult.SUCCESS);
             }
         }
     }
