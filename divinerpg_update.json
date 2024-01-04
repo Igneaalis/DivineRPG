@@ -1,5 +1,25 @@
 {
 	"homepage": "https://www.curseforge.com/minecraft/mc-mods/official-divinerpg",
+	"1.19.2": {
+		"1.9.7.1": "Unofficial DivineRPG fork version",
+		"1.9.6.11": "Official DivineRPG version, check here: https://github.com/DivineRPG/DivineRPG/tree/1.19.2",
+		"1.9.6.9": "To see all 1.19.2 changes, check here: https://github.com/DivineRPG/DivineRPG-Assets/blob/main/changelogs/1.19.2.md",
+		"1.9.6.8": "To see all 1.19.2 changes, check here: https://github.com/DivineRPG/DivineRPG-Assets/blob/main/changelogs/1.19.2.md",
+		"1.9.6.7": "To see all 1.19.2 changes, check here: https://github.com/DivineRPG/DivineRPG-Assets/blob/main/changelogs/1.19.2.md",
+		"1.9.6.6": "To see all 1.19.2 changes, check here: https://github.com/DivineRPG/DivineRPG-Assets/blob/main/changelogs/1.19.2.md",
+		"1.9.6.5": "To see all 1.19.2 changes, check here: https://github.com/DivineRPG/DivineRPG-Assets/blob/main/changelogs/1.19.2.md",
+		"1.9.6.4": "To see all 1.19.2 changes, check here: https://github.com/DivineRPG/DivineRPG-Assets/blob/main/changelogs/1.19.2.md",
+		"1.9.6.3": "To see all 1.19.2 changes, check here: https://github.com/DivineRPG/DivineRPG-Assets/blob/main/changelogs/1.19.2.md",
+		"1.9.6.2": "To see all 1.19.2 changes, check here: https://github.com/DivineRPG/DivineRPG-Assets/blob/main/changelogs/1.19.2.md",
+		"1.9.6.1": "To see all 1.19.2 changes, check here: https://github.com/DivineRPG/DivineRPG-Assets/blob/main/changelogs/1.19.2.md",
+		"1.9.6": "To see all 1.19.2 changes, check here: https://github.com/DivineRPG/DivineRPG-Assets/blob/main/changelogs/1.19.2.md",
+		"1.9.5": "To see all 1.19.2 changes, check here: https://github.com/DivineRPG/DivineRPG-Assets/blob/main/changelogs/1.19.2.md",
+		"1.9.4": "To see all 1.19.2 changes, check here: https://github.com/DivineRPG/DivineRPG-Assets/blob/main/changelogs/1.19.2.md",
+		"1.9.3": "To see all 1.19.2 changes, check here: https://github.com/DivineRPG/DivineRPG-Assets/blob/main/changelogs/1.19.2.md",
+		"1.9.2": "To see all 1.19.2 changes, check here: https://github.com/DivineRPG/DivineRPG-Assets/blob/main/changelogs/1.19.2.md",
+		"1.9.1": "To see all 1.19.2 changes, check here: https://github.com/DivineRPG/DivineRPG-Assets/blob/main/changelogs/1.19.2.md",
+		"1.9": "To see all 1.19.2 changes, check here: https://github.com/DivineRPG/DivineRPG-Assets/blob/main/changelogs/1.19.2.md"
+	},
 	"1.16.5": {
 		"1.8.6": "First non beta build"
 	},
