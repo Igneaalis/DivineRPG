@@ -1,7 +1,7 @@
 {
 	"homepage": "https://www.curseforge.com/minecraft/mc-mods/official-divinerpg",
 	"1.19.2": {
-		"1.9.7.2": "Liopleurodon are now passive mobs",
+		"1.9.7.2": "Liopleurodon are now passive mobs and Ender Triples now deal damage but don't explode blocks",
 		"1.9.7.1": "Unofficial DivineRPG fork version",
 		"1.9.6.11": "Official DivineRPG version, check here: https://github.com/DivineRPG/DivineRPG/tree/1.19.2",
 		"1.9.6.9": "To see all 1.19.2 changes, check here: https://github.com/DivineRPG/DivineRPG-Assets/blob/main/changelogs/1.19.2.md",
