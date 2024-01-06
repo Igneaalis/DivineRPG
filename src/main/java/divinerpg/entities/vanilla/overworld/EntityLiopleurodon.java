@@ -12,13 +12,18 @@ public class EntityLiopleurodon extends EntityDivineWaterMob {
 
     public EntityLiopleurodon(EntityType<? extends EntityLiopleurodon> type, Level worldIn) {
         super(type, worldIn);
-                                                                //Entity, maxTurnX, maxTurnY, inWaterSpeedModifier, outsideWaterSpeedModifier
+        //Entity, maxTurnX, maxTurnY, inWaterSpeedModifier, outsideWaterSpeedModifier
         this.moveControl = new SmoothSwimmingMoveControl(this, 1, 1, 0.3F, 0.1F, true);
         this.lookControl = new SmoothSwimmingLookControl(this, 10);
     }
 
     protected float getStandingEyeHeight(Pose poseIn, EntityDimensions sizeIn) {
         return 0.7F;
+    }
+
+    @Override
+    public boolean isAggressive() {
+        return false;
     }
 
     @Override

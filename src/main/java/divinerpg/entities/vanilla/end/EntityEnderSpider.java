@@ -32,6 +32,7 @@ public class EntityEnderSpider extends EnderMan {
         this.xpReward = 20;
     }
 
+    @Override
     protected void registerGoals() {
         this.goalSelector.removeAllGoals();
         this.goalSelector.addGoal(0, new FloatGoal(this));

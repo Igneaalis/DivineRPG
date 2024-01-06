@@ -33,10 +33,10 @@ public class EntityDivineWaterMob extends WaterAnimal {
 
     @Override
     protected void registerGoals() {
-    addBasicAI();
-    if(isAggressive()) {
-        addAttackingAI();
-    }
+        addBasicAI();
+        if(isAggressive()) {
+            addAttackingAI();
+        }
     }
 
     public boolean isAggressive() {
